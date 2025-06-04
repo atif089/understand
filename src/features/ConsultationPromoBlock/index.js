@@ -1,0 +1,46 @@
+import React from "react";
+import Image from "next/image";
+
+import SectionBlock from "@/components/SectionBlock";
+import ButtonHandler from "./ButtonHandler";
+
+const ConsultationPromoBlock = ({
+  heading,
+  subheading,
+  buttonText,
+  imageSrc,
+  className = "",
+  ...props
+}) => {
+  return (
+    <SectionBlock bgColor="bg-gradient-to-r from-[#005999] to-[#0077CC]" paddingY="py-16">
+      <div
+        className={`flex flex-col items-center justify-between gap-8 md:flex-row ${className}`}
+        {...props}
+      >
+        {/* Content column */}
+        <div className="min-w-[260px] flex-1 text-center md:text-left">
+          <h2 className="mb-4 text-3xl font-bold text-white md:text-4xl">{heading}</h2>
+          <p className="mb-6 text-base text-blue-100 md:text-lg">{subheading}</p>
+          <ButtonHandler buttonText={buttonText} variant="secondary" size="md" />
+        </div>
+
+        {/* Image column */}
+        <div className="flex w-full min-w-[260px] flex-1 justify-center md:justify-end">
+          <div className="relative aspect-square w-full max-w-none overflow-hidden rounded-2xl md:aspect-video md:max-w-[580px]">
+            <Image
+              src={imageSrc}
+              alt=""
+              fill
+              priority
+              className="object-cover"
+              sizes="(max-width: 767px) 100vw, 50vw"
+            />
+          </div>
+        </div>
+      </div>
+    </SectionBlock>
+  );
+};
+
+export default ConsultationPromoBlock;
