@@ -1,4 +1,5 @@
 import ConsultationPromoBlock from "@/features/ConsultationPromoBlock";
+import TrustFeatureBlock from "@/features/TrustFeatureBlock";
 import Footer from "@/features/Footer";
 import CopyrightFooter from "@/components/CopyrightFooter";
 
@@ -11,6 +12,7 @@ export default function Home() {
 
   return (
     <main>
+      <TrustFeatureBlock />
       {/* TODO: Figure out lazy loading and image optimization */}
       <ConsultationPromoBlock
         heading={heading}
