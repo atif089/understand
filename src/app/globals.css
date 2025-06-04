@@ -4,12 +4,21 @@
   --background: #ffffff;
   --foreground: #171717;
 }
-
+  
 @theme inline {
+  /* Base theme variables */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* Custom color palette */
+  --color-main: #1e293b;
+  --color-main-accent: #0173c5;
+  --color-main-light: #e0f2fe;
+  --color-gray: #575757;
+  --color-blue-gray: #64748b;
+  --color-white: #ffffff;
 }
 
 @media (prefers-color-scheme: dark) {
