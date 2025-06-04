@@ -3,7 +3,7 @@ import React from "react";
 const SectionBlock = ({
   children,
   bgColor = "bg-white",
-  paddingY = "py-16",
+  paddingY = "py-20",
   className = "",
   ...props
 }) => {

@@ -13,7 +13,7 @@ const ConsultationPromoBlock = ({
   ...props
 }) => {
   return (
-    <SectionBlock bgColor="bg-gradient-to-r from-[#005999] to-[#0077CC]" paddingY="py-16">
+    <SectionBlock bgColor="bg-gradient-to-r from-[#005999] to-[#0077CC]">
       <div
         className={`flex flex-col items-center justify-between gap-8 md:flex-row ${className}`}
         {...props}
