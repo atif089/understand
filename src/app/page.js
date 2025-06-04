@@ -1,4 +1,6 @@
 import ConsultationPromoBlock from "@/features/ConsultationPromoBlock";
+import Footer from "@/features/Footer";
+import CopyrightFooter from "@/components/CopyrightFooter";
 
 export default function Home() {
   // Example props for the CTA
@@ -16,6 +18,7 @@ export default function Home() {
         buttonText={buttonText}
         imageSrc={"/senior-couple-together-1.webp"}
       />
+      <Footer />
     </main>
   );
 }
