@@ -4,13 +4,11 @@
   --background: #ffffff;
   --foreground: #171717;
 }
-  
+
 @theme inline {
   /* Base theme variables */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 
   /* Custom color palette */
   --color-main: #1e293b;
@@ -19,6 +17,32 @@
   --color-gray: #575757;
   --color-blue-gray: #64748b;
   --color-white: #ffffff;
+
+  /* Custom Typography */
+  --font-h1: 3rem;
+  --lh-h1: 3.5rem;
+  --fw-h1: 600;
+
+  --font-h2: 2.5rem;
+  --lh-h2: 3rem;
+  --fw-h2: 600;
+
+  --font-h3: 2rem;
+  --lh-h3: 2.5rem;
+  --fw-h3: 500;
+
+  --font-body-l: 1.3125rem;
+  --lh-body-l: 2rem;
+  --fw-body-l: 500;
+
+  --font-body-m: 1.125rem;
+  --lh-body-m: 1.75rem;
+
+  --font-body-s: 1rem;
+  --lh-body-s: 1.5rem;
+
+  --font-body-xs: 0.875rem;
+  --lh-body-xs: 1.25rem;
 }
 
 @media (prefers-color-scheme: dark) {
@@ -31,5 +55,5 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-figtree), Arial, Helvetica, sans-serif;
 }

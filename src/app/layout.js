@@ -1,13 +1,11 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { Figtree } from "next/font/google";
+
+import CopyrightFooter from "@/components/CopyrightFooter";
+
 import "./globals.css";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
+const figTree = Figtree({
+  variable: "--font-figtree",
   subsets: ["latin"],
 });
 
@@ -18,11 +16,17 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${figTree.variable} antialiased`}>
         {children}
+        <CopyrightFooter
+          text={`© ${new Date().getFullYear()} All rights reserved.`}
+          links={[
+            { label: "Privacy Policy", href: "/privacy-policy" },
+            { label: "Terms & Conditions", href: "/terms" },
+            { label: "Cookie Policy", href: "/cookie-policy" },
+          ]}
+        />
       </body>
     </html>
   );
