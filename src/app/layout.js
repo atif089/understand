@@ -19,6 +19,7 @@ export default function RootLayout({ children }) {
     <html lang="en" suppressHydrationWarning>
       <body className={`${figTree.variable} antialiased`}>
         {children}
+
         <CopyrightFooter
           text={`© ${new Date().getFullYear()} All rights reserved.`}
           links={[
