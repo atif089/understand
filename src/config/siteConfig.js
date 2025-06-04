@@ -3,7 +3,9 @@
  */
 
 export const siteConfig = {
-  name: "Dr. Donald W. Hohman, MD",
+  title: "Dr.",
+  name: "Donald W. Hohman",
+  qualification: "MD",
   address: "4140 Parker Rd. Allentown, New Mexico 31134",
   phone: "(123) 456-7890",
   email: "info@donaldhohman.com",
