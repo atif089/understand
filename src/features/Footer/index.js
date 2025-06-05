@@ -34,6 +34,7 @@ export default function Footer() {
             </a>
           </p>
 
+          {/* TODO: Swap them out with actual icons from Figma */}
           <div className="flex items-center space-x-4 py-8">
             <a href={social.instagram} target="_blank" rel="noreferrer" aria-label="Instagram">
               <Instagram size={24} color="#FFFFFF" />

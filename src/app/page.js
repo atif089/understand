@@ -18,7 +18,7 @@ export default function Home() {
         doctorTitle={`${siteConfig.title} ${siteConfig.name}, ${siteConfig.qualification}`}
         doctorSubTitle="Board-certified orthopedic surgeon with over 20 years of experience."
         doctorDescription="Dr. Donald W. Hohman brings world-class expertise to hip and knee replacements. His minimally invasive approach is designed for less pain, faster recovery, and lasting results."
-        backgroundImage={"/senior-couple-together-1.webp"}
+        backgroundImage={"/masthead.jpg"}
       />
       <TrustFeatureBlock />
       {/* TODO: Figure out lazy loading and image optimization */}

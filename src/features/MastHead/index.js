@@ -17,7 +17,7 @@ const MastHead = ({
         <div className="z-10 w-full px-4 py-12 md:w-1/2 md:py-24">
           <div className="mb-6 flex justify-start">
             {doctorImage && (
-              <div className="h-32 w-32 overflow-hidden rounded-full md:h-48 md:w-48">
+              <div className="overflow-hidden rounded-full bg-gray-300 md:h-48 md:w-48">
                 <Image
                   src={doctorImage}
                   alt={doctorTitle || "Doctor"}
