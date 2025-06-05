@@ -1,12 +1,16 @@
 "use client";
 
-import React from "react";
 import Button from "@/components/Button";
+import { useContactModal } from "@/features/ContactForm/ContactFormModal";
 
 const ButtonHandler = ({ buttonText, variant = "primary", size = "md", ariaLabel, ...props }) => {
+  // Use the contact modal context
+  const { openModal } = useContactModal();
+
   const handleClick = () => {
     console.log("Consultation button clicked");
-    // Additional logic can be added here - like analytics tracking, etc.
+    // Open the contact form modal
+    openModal();
   };
 
   return (
