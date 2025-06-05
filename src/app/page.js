@@ -1,6 +1,8 @@
 import ConsultationPromoBlock from "@/features/ConsultationPromoBlock";
 import TrustFeatureBlock from "@/features/TrustFeatureBlock";
 import Footer from "@/features/Footer";
+import MastHead from "@/features/MastHead";
+import { siteConfig } from "@/config/siteConfig";
 
 export default function Home() {
   // Example props for the CTA
@@ -11,6 +13,13 @@ export default function Home() {
 
   return (
     <main>
+      <MastHead
+        doctorImage={"/donald-w-hofman.png"}
+        doctorTitle={`${siteConfig.title} ${siteConfig.name}, ${siteConfig.qualification}`}
+        doctorSubTitle="Board-certified orthopedic surgeon with over 20 years of experience."
+        doctorDescription="Dr. Donald W. Hohman brings world-class expertise to hip and knee replacements. His minimally invasive approach is designed for less pain, faster recovery, and lasting results."
+        backgroundImage={"/senior-couple-together-1.webp"}
+      />
       <TrustFeatureBlock />
       {/* TODO: Figure out lazy loading and image optimization */}
       <ConsultationPromoBlock
