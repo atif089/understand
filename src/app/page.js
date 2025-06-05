@@ -1,7 +1,6 @@
 import ConsultationPromoBlock from "@/features/ConsultationPromoBlock";
 import TrustFeatureBlock from "@/features/TrustFeatureBlock";
 import Footer from "@/features/Footer";
-import CopyrightFooter from "@/components/CopyrightFooter";
 
 export default function Home() {
   // Example props for the CTA

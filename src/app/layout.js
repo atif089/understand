@@ -1,6 +1,6 @@
 import { Figtree } from "next/font/google";
 
-import CopyrightFooter from "@/components/CopyrightFooter";
+import CopyrightFooter from "@/features/CopyrightFooter";
 
 import "./globals.css";
 import { siteConfig } from "@/config/siteConfig";
