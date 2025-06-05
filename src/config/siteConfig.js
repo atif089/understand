@@ -19,4 +19,9 @@ export const siteConfig = {
     linkedin: "https://linkedin.com",
     facebook: "https://facebook.com",
   },
+  seo: {
+    websiteSuffix: " | Dr. Donald W. Hohman",
+    metaDescription: "Welcome to Dr. Donald W. Hohman's website.",
+    metaKeywords: "Dr. Donald W. Hohman, doctor, medical doctor",
+  },
 };
