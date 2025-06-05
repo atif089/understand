@@ -4,19 +4,19 @@ import Image from "next/image";
 const TrustFeatureBlock = () => {
   const features = [
     {
-      icon: "/star.svg",
+      icon: "/icon--grad-hat.svg",
       title: "Harvard Fellowship in Joint Replacement",
     },
     {
-      icon: "/star.svg",
+      icon: "/icon--ribbon.svg",
       title: "Trusted Expert in Hip & Knee Surgery",
     },
     {
-      icon: "/star.svg",
+      icon: "/icon--chip.svg",
       title: "Minimally Invasive & Robotic-Assisted Techniques",
     },
     {
-      icon: "/star.svg",
+      icon: "/icon--star.svg",
       title: 'Named a "Best Doctor" 2023, 2024, 2025',
     },
   ];
@@ -32,12 +32,12 @@ const TrustFeatureBlock = () => {
               key={index}
               className="flex flex-col items-center rounded-xl border-1 border-gray-200 bg-white p-6 text-center"
             >
-              <div className="mb-4 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-[#005999] to-[#0077CC]">
+              <div className="mt-4 mb-8 flex items-center justify-center rounded-full bg-gradient-to-r from-[#005999] to-[#0077CC]">
                 <Image
                   src={feature.icon}
                   alt=""
-                  width={32}
-                  height={32}
+                  width={64}
+                  height={64}
                   className="text-white"
                   style={{ color: "white", stroke: "white" }}
                 />
