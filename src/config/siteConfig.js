@@ -24,4 +24,21 @@ export const siteConfig = {
     metaDescription: "Welcome to Dr. Donald W. Hohman's website.",
     metaKeywords: "Dr. Donald W. Hohman, doctor, medical doctor",
   },
+  videoGuides: [
+    {
+      image: "/hip-replacement-1.png",
+      title: "Hip Replacement",
+      text: "Experience renewed mobility and relief with our advanced, minimally invasive hip replacement approach.",
+    },
+    {
+      image: "/knee-replacement-2.png",
+      title: "Knee Replacement",
+      text: "Regain your stride and comfort through precise, patient-focused knee replacement surgery.",
+    },
+    {
+      image: "/shoulder-replacement-3.png",
+      title: "Total Shoulder Replacement",
+      text: "Restore strength and ease of movement with expert shoulder joint replacement tailored to your needs.",
+    },
+  ],
 };

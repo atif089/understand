@@ -22,25 +22,10 @@ export default function Home() {
         backgroundImage={"/masthead.jpg"}
       />
       <TrustFeatureBlock />
+      {/* TODO: In the future, if needed, we can also get this via Tanstack Query / fetch etc. */}
       <VideoGuidesBlock
         blockTitle="Understanding Joint Replacement Surgery"
-        videoGuides={[
-          {
-            image: "/hip-replacement-1.png",
-            title: "Hip Replacement",
-            text: "Experience renewed mobility and relief with our advanced, minimally invasive hip replacement approach.",
-          },
-          {
-            image: "/knee-replacement-2.png",
-            title: "Knee Replacement",
-            text: "Regain your stride and comfort through precise, patient-focused knee replacement surgery.",
-          },
-          {
-            image: "/shoulder-replacement-3.png",
-            title: "Total Shoulder Replacement",
-            text: "Restore strength and ease of movement with expert shoulder joint replacement tailored to your needs.",
-          },
-        ]}
+        videoGuides={siteConfig.videoGuides}
       />
       {/* TODO: Figure out lazy loading and image optimization */}
       <ConsultationPromoBlock
