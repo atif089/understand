@@ -1,9 +1,11 @@
+import { siteConfig } from "@/config/siteConfig";
+
 import ConsultationPromoBlock from "@/features/ConsultationPromoBlock";
 import TrustFeatureBlock from "@/features/TrustFeatureBlock";
 import VideoGuidesBlock from "@/features/VideoGuidesBlock";
 import Footer from "@/features/Footer";
 import MastHead from "@/features/MastHead";
-import { siteConfig } from "@/config/siteConfig";
+import Testimonials from "@/features/Testimonials";
 
 export default function Home() {
   // Example props for the CTA
@@ -21,6 +23,8 @@ export default function Home() {
         doctorDescription="Dr. Donald W. Hohman brings world-class expertise to hip and knee replacements. His minimally invasive approach is designed for less pain, faster recovery, and lasting results."
         backgroundImage={"/masthead.jpg"}
       />
+
+      <Testimonials />
       <TrustFeatureBlock />
       {/* TODO: In the future, if needed, we can also get this via Tanstack Query / fetch etc. */}
       <VideoGuidesBlock
