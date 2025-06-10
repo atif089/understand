@@ -1,6 +1,8 @@
 import React from "react";
 import Image from "next/image";
 
+import SectionBlock from "@/components/SectionBlock";
+
 const TrustFeatureBlock = () => {
   const features = [
     {
@@ -22,7 +24,7 @@ const TrustFeatureBlock = () => {
   ];
 
   return (
-    <section className="bg-blue-50 px-4 py-12 md:py-16">
+    <SectionBlock bgColor="bg-main-light" className="relative overflow-hidden">
       <div className="container mx-auto max-w-6xl">
         <h2 className="mb-10 text-center">Why Patients Trust Dr. Hohman</h2>
 
@@ -47,7 +49,7 @@ const TrustFeatureBlock = () => {
           ))}
         </div>
       </div>
-    </section>
+    </SectionBlock>
   );
 };
 
