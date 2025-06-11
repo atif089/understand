@@ -81,10 +81,8 @@ const testimonials = [
 
 const Testimonials = () => {
   return (
-    <SectionBlock>
-      <h2 className="mb-10 text-center text-3xl font-bold text-gray-800">
-        Real Patients. Real Results
-      </h2>
+    <SectionBlock paddingY="py-16">
+      <h2 className="text-center text-3xl font-bold text-gray-800">Real Patients. Real Results</h2>
       <Carousel leftArrow={<LeftArrow />} rightArrow={<RightArrow />}>
         {testimonials.map((testimonial, index) => (
           <TestimonialSlide key={index} {...testimonial} />

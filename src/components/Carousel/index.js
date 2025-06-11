@@ -24,7 +24,7 @@ const Carousel = ({ children, leftArrow, rightArrow, className = "" }) => {
   };
 
   return (
-    <SectionBlock className={`carousel-section ${className}`.trim()}>
+    <div className={`carousel-section px-8 py-8 ${className}`.trim()}>
       <div
         className="carousel-root"
         style={{
@@ -81,7 +81,7 @@ const Carousel = ({ children, leftArrow, rightArrow, className = "" }) => {
           {rightArrow}
         </button>
       </div>
-    </SectionBlock>
+    </div>
   );
 };
 
