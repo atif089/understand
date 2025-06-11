@@ -19,17 +19,19 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${figTree.variable} antialiased`}>
-        {children}
+      <body className={`${figTree.variable} md:bg-black mx-auto antialiased md:px-6`}>
+        <div className="page mx-auto max-w-screen-2xl">
+          {children}
 
-        <CopyrightFooter
-          text={`© ${new Date().getFullYear()} All rights reserved.`}
-          links={[
-            { label: "Privacy Policy", href: "/privacy-policy" },
-            { label: "Terms & Conditions", href: "/terms" },
-            { label: "Cookie Policy", href: "/cookie-policy" },
-          ]}
-        />
+          <CopyrightFooter
+            text={`© ${new Date().getFullYear()} All rights reserved.`}
+            links={[
+              { label: "Privacy Policy", href: "/privacy-policy" },
+              { label: "Terms & Conditions", href: "/terms" },
+              { label: "Cookie Policy", href: "/cookie-policy" },
+            ]}
+          />
+        </div>
       </body>
     </html>
   );
