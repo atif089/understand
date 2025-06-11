@@ -19,6 +19,7 @@ const ContactFormModal = ({ isOpen, onClose, onSubmit }) => {
     <Modal isOpen={isOpen} onClose={onClose}>
       <ContactForm
         onSubmit={handleFormSubmit}
+        onClose={onClose}
         // The ContactForm itself no longer needs direct isOpen/onClose for modal display
         // but might need onClose if a cancel button *within* the form should close the modal.
         // For now, we assume the main modal 'X' or overlay click handles closing.
