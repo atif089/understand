@@ -6,11 +6,11 @@ const VideoModal = ({ isOpen, onClose, videoUrl }) => {
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
-      <div className="aspect-video w-[90vw] max-w-[960px] lg:h-[540px]">
+      <div className="aspect-video w-[90vw] max-w-[960px]">
         <iframe
           src={videoUrl}
           title="Video Player"
-          className="h-full w-full rounded-lg"
+          className="h-full w-full"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowFullScreen
         />

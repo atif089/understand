@@ -29,7 +29,7 @@ const Modal = ({ isOpen, onClose, children }) => {
       role="dialog"
       aria-modal="true"
     >
-      <div className="relative max-h-[90vh] w-[620px] max-w-[90vw] overflow-auto rounded-lg bg-white p-6 shadow-xl">
+      <div className="relative max-h-[90vh] max-w-[90vw] overflow-hidden rounded-lg bg-white shadow-xl">
         {children}
       </div>
     </div>,
