@@ -10,8 +10,13 @@ import Testimonials from "@/features/Testimonials";
 export default function Home() {
   // Example props for the CTA
   const heading = "Ready to Book Your First Consultation?";
-  const subheading =
-    "Take the first step toward a pain-free life. Schedule your free consultation today - I'm here to help.";
+  const subheading = (
+    <>
+      <p>Take the first step toward a pain-free life.</p>
+      <p>Schedule your free consultation today - I&apos;m here to help.</p>
+    </>
+  );
+
   const buttonText = "Contact Doctor";
 
   return (

@@ -1,37 +1,31 @@
 "use client";
 
-import { useState, createContext, useContext } from "react";
+import React from "react";
+import Modal from "../../components/Modal"; // Adjust path if necessary
 import ContactForm from "./index";
 
-// Create context for the modal
-const ContactModalContext = createContext({
-  isOpen: false,
-  openModal: () => {},
-  closeModal: () => {},
-});
+const ContactFormModal = ({ isOpen, onClose, onSubmit }) => {
+  if (!isOpen) return null;
 
-// Hook for components to access the modal functionality
-export function useContactModal() {
-  return useContext(ContactModalContext);
-}
-
-// Modal Provider component
-export function ContactModalProvider({ children }) {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const openModal = () => setIsOpen(true);
-  const closeModal = () => setIsOpen(false);
-
-  const handleSubmit = (formData) => {
-    console.log("Form submitted with data:", formData);
-    // Here you would typically send the form data to an API
-    closeModal();
+  const handleFormSubmit = (formData) => {
+    if (onSubmit) {
+      onSubmit(formData);
+    }
+    // Optionally, close the modal on submit
+    // onClose();
   };
 
   return (
-    <ContactModalContext.Provider value={{ isOpen, openModal, closeModal }}>
-      {children}
-      <ContactForm isOpen={isOpen} onClose={closeModal} onSubmit={handleSubmit} />
-    </ContactModalContext.Provider>
+    <Modal isOpen={isOpen} onClose={onClose}>
+      <ContactForm
+        onSubmit={handleFormSubmit}
+        // The ContactForm itself no longer needs direct isOpen/onClose for modal display
+        // but might need onClose if a cancel button *within* the form should close the modal.
+        // For now, we assume the main modal 'X' or overlay click handles closing.
+        // If the form needs an internal cancel button, pass onClose to it.
+      />
+    </Modal>
   );
-}
+};
+
+export default ContactFormModal;

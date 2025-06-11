@@ -1,7 +1,6 @@
 import { Figtree } from "next/font/google";
 
 import CopyrightFooter from "@/features/CopyrightFooter";
-import { ContactModalProvider } from "@/features/ContactForm/ContactFormModal";
 
 import "./globals.css";
 import { siteConfig } from "@/config/siteConfig";
@@ -21,18 +20,16 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" suppressHydrationWarning>
       <body className={`${figTree.variable} antialiased`}>
-        <ContactModalProvider>
-          {children}
+        {children}
 
-          <CopyrightFooter
-            text={`© ${new Date().getFullYear()} All rights reserved.`}
-            links={[
-              { label: "Privacy Policy", href: "/privacy-policy" },
-              { label: "Terms & Conditions", href: "/terms" },
-              { label: "Cookie Policy", href: "/cookie-policy" },
-            ]}
-          />
-        </ContactModalProvider>
+        <CopyrightFooter
+          text={`© ${new Date().getFullYear()} All rights reserved.`}
+          links={[
+            { label: "Privacy Policy", href: "/privacy-policy" },
+            { label: "Terms & Conditions", href: "/terms" },
+            { label: "Cookie Policy", href: "/cookie-policy" },
+          ]}
+        />
       </body>
     </html>
   );

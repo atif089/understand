@@ -27,7 +27,7 @@ const ConsultationPromoBlock = ({
 
         {/* Image column */}
         <div className="flex w-full min-w-[260px] flex-1 justify-center md:justify-end">
-          <div className="relative aspect-square w-full max-w-none overflow-hidden rounded-2xl md:aspect-video md:max-w-[580px]">
+          <div className="relative aspect-square w-full max-w-none overflow-hidden rounded-2xl md:aspect-video md:h-[390px] md:max-w-[640px]">
             <Image
               src={imageSrc}
               alt=""
