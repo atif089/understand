@@ -8,12 +8,16 @@ import MastHead from "@/features/MastHead";
 import Testimonials from "@/features/Testimonials";
 
 export default function Home() {
-  // Example props for the CTA
+  // TODO: Move this to siteConfig
   const heading = "Ready to Book Your First Consultation?";
   const subheading = (
     <>
-      <p>Take the first step toward a pain-free life.</p>
-      <p>Schedule your free consultation today - I&apos;m here to help.</p>
+      <p className="mb-2 text-base text-blue-100 md:text-lg">
+        Take the first step toward a pain-free life.
+      </p>
+      <p className="mb-6 text-base text-blue-100 md:text-lg">
+        Schedule your free consultation today - I&apos;m here to help.
+      </p>
     </>
   );
 

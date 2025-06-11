@@ -21,7 +21,7 @@ const ConsultationPromoBlock = ({
         {/* Content column */}
         <div className="min-w-[260px] flex-1 text-center md:text-left">
           <h2 className="mb-4 text-white">{heading}</h2>
-          <p className="mb-6 text-base text-blue-100 md:text-lg">{subheading}</p>
+          {subheading}
           <ButtonHandler buttonText={buttonText} variant="secondary" size="md" />
         </div>
 
