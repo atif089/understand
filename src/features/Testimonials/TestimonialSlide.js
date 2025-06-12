@@ -11,7 +11,7 @@ const TestimonialSlide = ({ imageSrc, headline, text, author }) => {
       </div>
       <div className="flex w-1/2 flex-col justify-center bg-[#eaf2fa] p-12 text-left">
         <h3 className="text-3xl font-bold text-gray-800">{headline}</h3>
-        <blockquote className="mt-4 text-gray-600">"{text}"</blockquote>
+        <blockquote className="mt-4 text-gray-600">{`&quot;${text}&quot;`}</blockquote>
         <p className="mt-6 text-right font-semibold text-gray-700">— {author}</p>
       </div>
     </div>
