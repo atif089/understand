@@ -15,8 +15,8 @@ const Carousel = ({ children, leftArrow, rightArrow, className = "" }) => {
   };
 
   return (
-    <div className={`md:px-8 py-8 ${className}`.trim()}>
-      <div className="relative flex items-center justify-center">
+    <div className={`py-8 md:px-8 ${className}`.trim()}>
+      <div className="relative mx-auto flex max-w-6xl items-center justify-center">
         <button
           className="absolute top-1/2 left-0 z-20 -translate-y-1/2 cursor-pointer border-none bg-transparent"
           aria-label="Previous"

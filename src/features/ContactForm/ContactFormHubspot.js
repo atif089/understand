@@ -7,7 +7,7 @@ export default function ContactForm({ onSubmit = () => {}, onClose = () => {} })
     // The outer div with modal styling and the explicit close button are removed.
     // The generic Modal component now handles this.
     // The h2 title is also part of the form content now.
-    <div className="w-full max-w-[90vw] min-w-[560px] px-8 py-8">
+    <div className="w-full px-8 py-8">
       <h2 className="mb-4 text-xl font-semibold text-gray-800">Contact Form</h2>
       <button
         onClick={onClose} // Use the onClose prop to close the modal
