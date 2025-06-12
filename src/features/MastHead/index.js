@@ -14,10 +14,10 @@ const MastHead = ({
     <SectionBlock bgColor="bg-main-light" paddingY="py-0" className="relative overflow-hidden">
       <div className="flex flex-col md:flex-row md:items-center">
         {/* Left content column (constrained to container width) */}
-        <div className="z-10 w-full md:px-16 py-12 md:w-1/2 md:py-24">
+        <div className="w-full md:px-16 py-12 md:w-1/2 md:py-24">
           <div className="mb-6 flex justify-start">
             {doctorImage && (
-              <div className="overflow-hidden rounded-full bg-gray-300 md:h-48 md:w-48">
+              <div className="overflow-hidden rounded-full bg-gray-300 md:h-48 md:w-48 w-24 h-24">
                 <Image
                   src={doctorImage}
                   alt={doctorTitle || "Doctor"}
@@ -44,7 +44,7 @@ const MastHead = ({
         </div>
 
         {/* Right background image (will stretch beyond container) */}
-        <div className="absolute top-0 right-0 h-full w-full md:w-1/2">
+        <div className="md:absolute md:top-0 md:right-0 h-full w-full md:w-1/2">
           {backgroundImage && (
             <div className="relative h-full w-full">
               <Image src={backgroundImage} alt="" fill className="object-cover" priority />

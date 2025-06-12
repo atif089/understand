@@ -1,18 +1,9 @@
 "use client";
 
 import React, { useState } from "react";
-import SectionBlock from "@/components/SectionBlock/index";
 
 // TODO support gestures
 
-/**
- * Carousel wrapper component.
- * @param {object} props
- * @param {React.ReactNode[]} props.children - Carousel items
- * @param {React.ReactNode} props.leftArrow - SVG for left arrow
- * @param {React.ReactNode} props.rightArrow - SVG for right arrow
- * @param {string} [props.className] - Optional className for styling
- */
 const Carousel = ({ children, leftArrow, rightArrow, className = "" }) => {
   const [current, setCurrent] = useState(0);
   const total = React.Children.count(children);
@@ -24,59 +15,20 @@ const Carousel = ({ children, leftArrow, rightArrow, className = "" }) => {
   };
 
   return (
-    <div className={`carousel-section px-8 py-8 ${className}`.trim()}>
-      <div
-        className="carousel-root"
-        style={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-          position: "relative",
-        }}
-      >
+    <div className={`md:px-8 py-8 ${className}`.trim()}>
+      <div className="relative flex items-center justify-center">
         <button
-          className="carousel-arrow left"
+          className="absolute top-1/2 left-0 z-20 -translate-y-1/2 cursor-pointer border-none bg-transparent"
           aria-label="Previous"
           onClick={() => goTo(current - 1)}
-          style={{
-            background: "none",
-            border: "none",
-            cursor: "pointer",
-            position: "absolute",
-            left: 0,
-            top: "50%",
-            transform: "translateY(-50%)",
-            zIndex: 2,
-          }}
         >
           {leftArrow}
         </button>
-        <div
-          className="carousel-content"
-          style={{
-            width: "100%",
-            maxWidth: 900,
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-          }}
-        >
-          {React.Children.toArray(children)[current]}
-        </div>
+        <div className="flex flex-col">{React.Children.toArray(children)[current]}</div>
         <button
-          className="carousel-arrow right"
+          className="absolute top-1/2 right-0 z-20 -translate-y-1/2 cursor-pointer border-none bg-transparent"
           aria-label="Next"
           onClick={() => goTo(current + 1)}
-          style={{
-            background: "none",
-            border: "none",
-            cursor: "pointer",
-            position: "absolute",
-            right: 0,
-            top: "50%",
-            transform: "translateY(-50%)",
-            zIndex: 2,
-          }}
         >
           {rightArrow}
         </button>
