@@ -2,7 +2,7 @@
 
 import React from "react";
 import Modal from "../../components/Modal"; // Adjust path if necessary
-import ContactForm from "./index";
+import ContactFormHubspot from "./ContactFormHubspot";
 
 const ContactFormModal = ({ isOpen, onClose, onSubmit }) => {
   if (!isOpen) return null;
@@ -17,7 +17,7 @@ const ContactFormModal = ({ isOpen, onClose, onSubmit }) => {
 
   return (
     <Modal isOpen={isOpen} onClose={onClose}>
-      <ContactForm
+      <ContactFormHubspot
         onSubmit={handleFormSubmit}
         onClose={onClose}
         // The ContactForm itself no longer needs direct isOpen/onClose for modal display
