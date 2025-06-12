@@ -30,7 +30,7 @@ const VideoGuidesBlock = ({ blockTitle, videoGuides }) => {
   return (
     <>
       <SectionBlock>
-        <div className="container mx-auto max-w-6xl">
+        <div className="mx-auto max-w-6xl">
           <h2 className="mb-10 text-center">{blockTitle}</h2>
 
           <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
